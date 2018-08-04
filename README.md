@@ -1,11 +1,9 @@
 # Lodash Advanced Filters for Node.js
 
-A Serverless starter that adds ES7 syntax, serverless-offline, environment variables, and unit test support. Part of the [Serverless Stack](http://serverless-stack.com) guide.
-
-
+---
+### Main Features
 
 - **Adds "where" Filter to lodash which supports similar finders to most good db ORMs**
-- **Package your functions using Webpack**
 - **Adds Helpful utils to lodash**
   - lodash.forceArray ensures that the value is an array or makes it a 1 element array and returns
   - lodash.between Check if a value is between two other values (supports Date's too)
