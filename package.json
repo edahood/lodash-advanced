@@ -1,0 +1,27 @@
+{
+  "name": "lodash-advanced",
+  "version": "1.0.0",
+  "description": "Addons for lodash such a where filtering similar to a where filter to a DB",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "node ./node_modules/mocha/bin/_mocha ",
+    "test:debug": "node %NODE_DEBUG_OPTION% ./node_modules/mocha/bin/_mocha"
+  },
+  "keywords": [
+    "lodash",
+    "where"
+  ],
+  "author": "Eliot Dahood",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "uuid": "^3.3.2"
+  }
+}
