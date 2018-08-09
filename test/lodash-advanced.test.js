@@ -111,6 +111,19 @@ describe('lodash-plus', function() {
                 expect(_.isDate("2018-07-04")).to.be.true;
             })
         })
+        describe('takeLeftSlice', function(){
+            it('should work on simple arrays with less than length', function(){
+                let arr = [13, 14, 15, 16, 17];
+                expect(_.takeLeftSlice(arr, 3)).to.be.a('array').and.have.lengthOf(3).and.have.members([13,14,15]);
+                expect(arr).to.have.lengthOf(2).and.have.members([16,17]);
+            })
+        })
+        describe('addConverter', function(){
+            it('should add a stupid Converter', function(){
+                _.addConverter('stupid', () => {return 'dumber';});
+                expect(_.to(13, 'stupid')).to.be.equal('dumber');
+            })
+        })
         describe('annotation and deannotation', function(){
             let sampleObject =  {student: {age: 13, name: 'eliot'}, stars: 10};
             let sampleAnnotated = {'student.name': 'eliot', 'student.age': 13, 'stars': 10};
@@ -231,6 +244,16 @@ describe('lodash-plus', function() {
                 }
                 )).to.have.lengthOf(2)
             })
+            it('should match dot notated', function(){
+                let data = [{name: 'foo', options: {aliases: ['funny','man'], label: 'blah', meta: {age: 13}}}];
+                expect(_.where(data, {
+                    'options.label': 'blah'
+                })).to.have.lengthOf(1);
+                expect(_.where(data, {
+                    'options.meta.age': 13
+                })).to.have.lengthOf(1);
+            })
+
 
         })
     })

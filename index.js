@@ -1,6 +1,5 @@
 'use strict';
 
-const debug = require('debug')("lodash:plus");
 const loader = require('./lib/index');
 let _;
 

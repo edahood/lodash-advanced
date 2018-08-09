@@ -1,6 +1,6 @@
 {
   "name": "lodash-advanced",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Addons for lodash such a where filtering similar to a where filter to a DB",
   "main": "index.js",
   "directories": {
@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "lodash": "^4.17.10",
+    "moment": "^2.22.2",
     "uuid": "^3.3.2"
   }
 }
