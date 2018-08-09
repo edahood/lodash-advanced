@@ -1,6 +1,6 @@
 {
   "name": "lodash-advanced",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Addons for lodash such a where filtering similar to a where filter to a DB",
   "main": "index.js",
   "directories": {
@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "node ./node_modules/mocha/bin/_mocha ",
-    "test:debug": "node %NODE_DEBUG_OPTION% ./node_modules/mocha/bin/_mocha"
+    "test:debug": "node ./node_modules/mocha/bin/_mocha"
   },
   "keywords": [
     "lodash",
