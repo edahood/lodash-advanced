@@ -140,6 +140,14 @@ describe('lodash-plus', function() {
                 })
             })
         })
+        describe('to conversion', function(){
+           it('should convert a string to a date', function(){
+               let d = _.to("1998-10-02", 'date');
+               expect(d).to.be.a('Date');
+               expect(d.getFullYear()).to.be.equal(1998);
+           })
+
+        })
     })
     describe('uid', function(){
         let _ = loader(lodash.runInContext());
