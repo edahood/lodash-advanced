@@ -148,6 +148,13 @@ describe('lodash-plus', function() {
            })
 
         })
+        describe('fancyCamelCase', function(){
+            it('should handle underscores', function(){
+                expect(_.fancyCamelCase('not_COOL_Man')).to.be.equal('NotCoolMan');
+                expect(_.fancyCamelCase('not_ COOL_ Man')).to.be.equal('NotCoolMan');
+                expect(_.fancyCamelCase('NOt_cOOL_man')).to.be.equal('NotCoolMan');
+            })
+        })
     })
     describe('uid', function(){
         let _ = loader(lodash.runInContext());
